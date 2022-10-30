@@ -1,16 +1,16 @@
 public class Odezhda extends Product{
-    public Odezhda(String name, double price) {
-        super(name, price);
+    public Odezhda(String name, double price, double expenses) {
+        super(name, price, expenses);
     }
 
     @Override
     public String toString() {
-        return "Odezhda{" +
+        return "Odezhda - " +
                 "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+                ", price=" + price;
     }
     public void start(){
         check();
+        setExpenses(price);
     }
 }

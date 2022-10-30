@@ -3,16 +3,16 @@ import java.util.Scanner;
 public class Telefon extends Electronics {
 
 
-    public Telefon(String name, double price) {
-        super(name, price);
-
+    public Telefon(String name, double price, double expenses) {
+        super(name, price, expenses);
     }
 
     @Override
     public String toString() {
         return "Telefon - " +
                 "name='" + name + '\'' +
-                ", price=" + price
+                ", price=" + price +" Оформлена гарантия на год. Стоимость = "
+        +( guaranteeDesign()-price)+System.lineSeparator()+"Сумма =  "+expenses
                 ;
     }
 

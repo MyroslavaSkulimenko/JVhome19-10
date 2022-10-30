@@ -6,13 +6,30 @@ public class Main {
 телефоны продаются только с контрактом оператора (т.е. при покупке должен выполнятся метод “Оформить контракт”)
 Необходимо создать соответствующую структуру классов метод покупки товара*/
 
-        Telefon t1 = new Telefon("Nokia", 120);
-        t1.start();
-        Notebook n1 = new Notebook("ZTE", 700);
-        n1.start();
-        Food banana = new Food("banana", 1.25);
-        banana.start();
-        Odezhda o1=new Odezhda("Coat",112);
-        o1.start();
+        Telefon t1 = new Telefon("Nokia", 120,0);
+       // t1.start();
+        Notebook n1 = new Notebook("ZTE", 700,0);
+       // n1.start();
+        Food banana = new Food("banana", 1.25,0);
+      //  banana.start();
+        Odezhda o1=new Odezhda("Coat",112,0);
+      //  o1.start();
+        Product f1=new Food("kivi",0.87,0);
+        Product[]arr={n1,t1,o1,f1,banana};
+        for (Product p:arr){
+            System.out.println(p.name+p.price);
+        }
+        double sum=0;
+        Basket basket1=new Basket(10);
+        basket1.add(new Food("kivi",1.20,0));
+        basket1.add(new Food("fresh",1.80,0));
+        basket1.add(new Food("aple",2.20,0));
+        basket1.add(new Telefon("nokia",780,0));
+        basket1.add(new Telefon("nokia2233",800,0));
+        basket1.add(new Notebook("Nout1",1000,0));
+        basket1.add(new Odezhda("Coat",230,0));
+        System.out.println(basket1.toString());
+        System.out.println("сумма заказа = "+basket1.sumBasket());
     }
+
 }

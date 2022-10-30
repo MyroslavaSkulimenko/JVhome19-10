@@ -1,12 +1,20 @@
-public class Product {
+public  class Product {
     protected String name;
     protected double price;
-
-    public Product(String name, double price) {
+    protected double expenses;
+    public Product(String name, double price, double expenses) {
         this.name = name;
+        this.price = price;
+        this.expenses=expenses=0;
+    }
+
+    public void setPrice(double price) {
         this.price = price;
     }
 
+    public void setExpenses(double expenses) {
+        this.expenses = expenses;
+    }
 
     public  String toString() {
         return "Chack - " +
@@ -17,4 +25,5 @@ public class Product {
 public void check(){
     System.out.println( "Check : "+toString());
 }
+public  void start(){};
 }
