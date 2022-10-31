@@ -9,8 +9,8 @@ public class Odezhda extends Product{
                 "name='" + name + '\'' +
                 ", price=" + price;
     }
-    public void start(){
-        check();
+    public void purchase(){
+        printCheck();
         setExpenses(price);
     }
 }

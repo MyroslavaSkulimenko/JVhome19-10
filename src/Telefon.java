@@ -15,28 +15,25 @@ public class Telefon extends Electronics {
         +( guaranteeDesign()-price)+System.lineSeparator()+"Сумма =  "+expenses
                 ;
     }
-
     public int   contract() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Для оформления контракта введите - 1");
-        int res = (sc.nextInt());
-        if (res == 1) {
-            System.out.println("Спасибо! Ваш оператор - Телеком!");
-
-        } else {
-            System.out.println("Оформление контракта - обязятельное условие для покупки!");
-            for (int i = 0; res != 1 && i < 2; i++) {
-                System.out.println("Для оформления контракта введите - 1");
-                res = (sc.nextInt());
-            }
-            if (res != 1) {
-                System.out.println("Отказ!"); }
+        if(isContract()){System.out.println("Спасибо! Ваш оператор - Телеком!");}
+        else {
+            System.out.println("Отказ!");
         }
-       return res;
+        return 1;}
+    public boolean   isContract() {
+        Scanner sc = new Scanner(System.in);
+        int res=0;
+        for (int i = 0; i <3 ; i++) {
+            System.out.println("Для оформления контракта введите - 1");
+            res = sc.nextInt();
+            if (res==1){return true; }break;
+        }return false;
+
     }
 
-    public void start() {
-        check();
+    public void purchase() {
+        printCheck();
      if  (contract()==1){
          guaranteeDesign();}
      else {

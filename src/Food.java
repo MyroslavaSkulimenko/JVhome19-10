@@ -15,8 +15,8 @@ public class Food  extends Product {
 
     }
 
-    public void start() {
-        check();
+    public void purchase() {
+        printCheck();
        delivery();
     }
     public  double delivery(){

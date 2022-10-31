@@ -14,8 +14,8 @@ public class Notebook extends Electronics {
                 ;
     }
 
-    public void start() {
-        check();
-        System.out.println(guaranteeDesign());
+    public void purchase() {
+        printCheck();
+       // System.out.println(guaranteeDesign());
     }
 }

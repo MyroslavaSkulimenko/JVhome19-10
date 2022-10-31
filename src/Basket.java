@@ -25,16 +25,27 @@ public class Basket {
         products = arr;// подменили ссылку на новый массив
     }
     public String toString() {
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < products.length & i < size; i++) {
+            products[i].purchase();
+            res.append(products[i]).append(System.lineSeparator());
+
+        }
+       return res.append("____________").append(System.lineSeparator()).append("Total: ").append(size).toString();
+    }
+
+
+  /*  public String toString() {
         String res = "";
         for (int i = 0; i < products.length & i < size; i++) {
-            products[i].start();
+            products[i].purchase();
             res += products[i] + System.lineSeparator();
 
         }
         res += "____________" + System.lineSeparator() + "Total: " + size ;
         return res;
 
-    }
+    }*/
 
     public Product get(int index) {
         if (index < size) {

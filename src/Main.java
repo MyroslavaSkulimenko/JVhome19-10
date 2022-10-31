@@ -30,6 +30,7 @@ public class Main {
         basket1.add(new Odezhda("Coat",230,0));
         System.out.println(basket1.toString());
         System.out.println("сумма заказа = "+basket1.sumBasket());
+       // t1.purchase();
     }
 
 }

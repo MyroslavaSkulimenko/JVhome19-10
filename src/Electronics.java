@@ -18,4 +18,7 @@ public class Electronics extends Product{
        // System.out.println("Суммарная стоимость: "+garant);
         return garant;
     }
+    public void purchase() {}
+
+
 }
